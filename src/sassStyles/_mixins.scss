@@ -1,0 +1,22 @@
+// More prep for Responseive Design
+@import './variables';
+
+@mixin smallMinBreakPoint {
+  @media (min-width: #{$screen-small}) {
+    @content;
+  }
+}
+
+@mixin mediumMinBreakPoint {
+  @media (min-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin largeMinBreakPoint {
+  @media (min-width: #{$screen-large}) {
+    @content;
+  }
+}
+
+//NOTE TO SELF NOT TO FORGET TO IMPORT THESE INTO ANY SCSS FILE THAT REQUIRES MEDIA QUERIES!!!!!!!!!!!!!
