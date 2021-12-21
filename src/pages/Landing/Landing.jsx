@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import AuthModal from '../../modals/auth-modals'
 
 import './landing.scss'
 
@@ -10,8 +11,7 @@ const Landing = ({ user, handleLogout }) => {
         {user ? 
           <div className="user-nav">
             <ul>
-              <li><Link to="/profile">View Profile</Link></li>
-              <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
+              <AuthModal />
             </ul>
           </div>
         :

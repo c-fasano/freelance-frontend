@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import LoginModal from "react-login-modal";
  
-const AuthModal = (props) => {
+const AuthModal = () => {
   const handleSignup = (username, email, password) => {};
   const handleLogin = (username, password) => {}
 
