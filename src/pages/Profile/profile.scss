@@ -1,6 +1,86 @@
 @import '../../sassStyles/variables';
 @import '../../sassStyles/mixins';
 
+
+
+
+
+
+
+
+.active-list {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+
+
+.inactive-list {
+  transform: translateX(0%);
+  transition: 0.5s ease-in-out;
+}
+
+
+@media screen and (max-width: 992px) {
+  .prof-page {
+    display: flex;
+
+    .prof-side-bar {
+      position: fixed;
+      width: 30%;
+      height: 95%;
+      bottom: 0;
+      left: 0;
+      background-color: lightgreen;
+    }
+
+    .prof-picture {
+      height: 12%;
+      background-color: $light2;
+    }
+
+    .prof-card {
+      height: 37%;
+      background-image: url('../../images/ProjectPhoto3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .side-nav {
+      height: 51vh;
+      background-color: $light2;
+      li {
+        font-size: 1.5rem;
+        color: $light1;
+        margin-left: 3%;
+        overflow-y: scroll;
+      }
+    }
+
+    .project-container {
+      overflow-y: scroll;
+      height: 25vh;
+      width: 25%;
+      margin-top: 2px solid $dark1;
+      margin: auto;
+      margin-top: 35%;
+      border-top: 2px solid $dark1;
+      border-bottom: 2px solid $dark1;
+    }
+  }
+
+  .clients {
+    background-color: $light2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 95%;
+    z-index: 2;
+    box-shadow: 2px 2px 25px;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .prof-page {
     display: flex;
@@ -65,16 +145,7 @@
 
 
 
-.active-list {
-  transform: translateX(100%);
-  transition: 0.5s ease-in-out;
-}
 
-
-.inactive-list {
-  transform: translateX(0%);
-  transition: 0.5s ease-in-out;
-}
 
 
   
