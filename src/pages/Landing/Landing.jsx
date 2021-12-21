@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ReactModal from 'react-modal'
 
 import './landing.scss'
 
