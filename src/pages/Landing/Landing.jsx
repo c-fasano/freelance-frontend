@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ReactModal from 'react-modal'
+import LoginModal from '../../Modals/login-modal'
 
 import './landing.scss'
 
@@ -18,7 +19,11 @@ const Landing = ({ user, handleLogout }) => {
         :
           <div className="reg-nav">
             <ul>
-            <li><Link to="/login">Log In</Link></li>
+            <li><LoginModal /></li>
+            <button onClick={e => {
+              this.showModal()
+            }}
+            > Show Modal</button>
             <li><Link to="/signup">Sign Up</Link></li>
             </ul>
           </div>
