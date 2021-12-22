@@ -38,6 +38,22 @@ button {
   transition: 0.5s ease-in-out;
 }
 
+.project-form {
+  background-color: black;
+  position: absolute;
+  width: 40vw;
+  height: 60vh;
+  z-index: 9;
+  margin-top: 15vh;
+}
+
+.active-project-form {
+  transform: translateX(50%);
+}
+
+.inactive-project-form {
+  transform: translateX(-100%)
+}
 
 @media screen and (max-width: 992px) {
   .prof-page {

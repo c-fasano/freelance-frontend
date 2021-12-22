@@ -11,9 +11,9 @@ import {
 const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidForm, formData, clients}) => {
   const formElement = useRef()
   
-  useEffect(() => {
-    formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
-  }, [formData])
+  // useEffect(() => {
+  //   formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
+  // }, [formData])
 
   return (
     <div className="new-project">
@@ -29,10 +29,14 @@ const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidFor
             onChange={handleChange}
           />
         </FormGroup>
-        <FormGroup>
+        {/* <FormGroup>
           <Label for="client">Name of Client</Label>
-          <Selection name="client" onChange={handleChange}><Option value="" default></Option></Selection>
-        </FormGroup>
+          <select name="client" onChange={handleChange}>
+            <option value='' default></option>
+          {clients.map((client) => (
+            <option value={client._id} key={client._id}>{client.name}</option>
+          ))}</select>
+        </FormGroup> */}
         <FormGroup>
           <Label for="startDate">Start Date</Label>
           <Input 
@@ -63,7 +67,10 @@ const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidFor
             onChange={handleChange}
           />
         </FormGroup>
-        <Button type='submit' disabled={!validform}></Button>
+        <Button type='submit' disabled={!validForm}></Button>
       </Form> 
     </div>
   )
+}
+
+export default ProjectForm

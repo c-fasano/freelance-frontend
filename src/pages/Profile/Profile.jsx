@@ -2,11 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './profile.scss'
 import moment from 'moment'
-
-const Profile = ({user, projects, clients, clientListStatus, setClientListStatus, handleLogout, projectFormStatus, setProjectFormStatus}) => {
+import ProjectForm from '../../components/Forms/projectForm';
+const Profile = ({user, projects, clients, clientListStatus, setClientListStatus, handleLogout, projectFormStatus, setProjectFormStatus, handleCreateProject}) => {
   
-  console.log(clientListStatus)
-
   return (
     <div className="prof-page">
       <div className="header">
@@ -22,12 +20,17 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
             <br/><br/>
             <p><button onClick={() => setClientListStatus(!clientListStatus)}>Client List</button></p>
             <br/><br/>
-            <p>Create New Project</p>
+            <p><button onClick={() => setProjectFormStatus(!projectFormStatus)}>Create Project</button></p>
             <br/><br/>
             <p>Another Link</p>
             <br/><br/>
             <p><Link to="/" onClick={handleLogout}>LOG OUT</Link></p>
         </div>
+      </div>
+      <div className={`project-form ${projectFormStatus ? "active-project-form" : "inactive-project-form"}`}>
+        <ProjectForm 
+          handleCreateProject={handleCreateProject}
+        />
       </div>
       <section className="project-container">
           {projects?.map((project) => (
