@@ -1,9 +1,9 @@
 import React from 'react';
-import ClientList from '../ClientList';
+import { Link } from 'react-router-dom';
 import './profile.scss'
 import moment from 'moment'
 
-const Profile = ({user, projects, clients, clientListStatus, setClientListStatus}) => {
+const Profile = ({user, projects, clients, clientListStatus, setClientListStatus, handleLogout}) => {
   
   console.log(clientListStatus)
 
@@ -26,7 +26,7 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
             <br/><br/>
             <p>Another Link</p>
             <br/><br/>
-            <p>Log Out</p>
+            <p><Link to="/" onClick={handleLogout}>LOG OUT</Link></p>
         </div>
       </div>
       <section className="project-container">
