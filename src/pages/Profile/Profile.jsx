@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './profile.scss'
 import moment from 'moment'
 
-const Profile = ({user, projects, clients, clientListStatus, setClientListStatus, handleLogout}) => {
+const Profile = ({user, projects, clients, clientListStatus, setClientListStatus, handleLogout, projectFormStatus, setProjectFormStatus}) => {
   
   console.log(clientListStatus)
 
@@ -33,8 +33,8 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
           {projects?.map((project) => (
             <div className="project-list">
               <h1>{project.title}</h1>
-              <h2>{moment(project.startDate).format('MM/DD/YYYY')}</h2>
-              <h2>{moment(project.endDate).format('MM/DD/YYYY')}</h2>
+              <h2>Start Date: {moment(project.startDate).format('MM/DD/YYYY')}</h2>
+              <h2>Complete By: {moment(project.endDate).format('MM/DD/YYYY')}</h2>
               <h3>${project.hourlyRate} /Hr</h3>
             </div>
           ))}

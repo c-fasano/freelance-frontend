@@ -31,7 +31,7 @@ const App = () => {
   const [signInFormStatus, setSignInFormStatus] = useState (false)
   const [signUpFormStatus, setSignUpFormStatus] = useState (false)
   const [clientFormStatus, setClientInFormStatus] = useState (false)
-  const [projectFormStatus, setProjectInFormStatus] = useState (false)
+  const [projectFormStatus, setProjectFormStatus] = useState (false)
   const [invoiceFormStatus, setInvoiceInFormStatus] = useState (false)
 
 
@@ -105,7 +105,7 @@ const App = () => {
         />
         <Route
           path="/profile"
-          element={user ? <Profile user={user} projects={projects} clients={clients} clientListStatus={clientListStatus} setClientListStatus={setClientListStatus} handleLogout={handleLogout}/> : <Navigate to="/login" />}
+          element={user ? <Profile user={user} projects={projects} clients={clients} clientListStatus={clientListStatus} setClientListStatus={setClientListStatus} handleLogout={handleLogout} projectFormStatus={projectFormStatus} setProjectFormStatus={setProjectFormStatus}/> : <Navigate to="/login" />}
         />
         <Route
           path="/projects"
