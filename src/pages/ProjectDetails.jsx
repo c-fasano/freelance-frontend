@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
+// Styles
 import './project-details.scss'
-
 // Services
 import * as projectService from '../services/projectService'
 // Components
@@ -10,14 +10,11 @@ import CardActions from '../components/Project/CardActions';
 import TaskSection from '../components/Task/TaskSection'
 import HoursSection from '../components/Hours/HoursSection';
 
-const ProjectDetails = ({projects, setProjects, handleUpdateProjectsList}) => {
+const ProjectDetails = ({handleUpdateProjectsList}) => {
   const { id } = useParams()
   const [project, setProject] = useState()
   const [tasks, setTasks] = useState([])
   const [hours, setHours] = useState()
-  console.log(project);
-  console.log('tasks', tasks)
-  console.log('hours', hours)
 
   useEffect(() => {
     const fetchProject = async () => {

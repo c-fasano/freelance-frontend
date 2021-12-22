@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-
-import InvoiceForm from './InvoiceForm'
+// Services
 import { addInvoice } from '../../services/invoiceService';
+// Components
+import InvoiceForm from './InvoiceForm'
 
 const AddInvoice = (props) => {
   const navigate = useNavigate()

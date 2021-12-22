@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom'
-import SignInForm from '../../components/Forms/signInForm'
-import SignupForm from '../../components/Forms/signUpForm'
 
+import SignInForm from '../../components/Forms/signInForm'
+import SignUpForm from '../../components/Forms/signUpForm'
 
 import './landing.scss'
 
 const Landing = ({ user, handleLogout, signInFormStatus, setSignInFormStatus,  handleSignupOrLogin, signUpFormStatus, setSignUpFormStatus}) => {
   return (
-    
     <div className="container">
       <div className="navigation">
         {user ? 

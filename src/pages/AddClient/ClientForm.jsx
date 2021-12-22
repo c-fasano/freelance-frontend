@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const ClientForm = ({handleCreateClient, handleChange, validForm, setValidForm, formData, setFormData}) => {
+const ClientForm = ({handleCreateClient, handleChange, validForm, setValidForm, formData}) => {
   const formElement = useRef()
 
   useEffect(() => {

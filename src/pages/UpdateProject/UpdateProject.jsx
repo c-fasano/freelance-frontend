@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
+// Components
 import UpdateForm from './UpdateForm'
-
+// Services
 import { updateProject, getProjectById } from '../../services/projectService';
 
 const UpdateProject = (props) => {
-  console.log('props', props);
   const navigate = useNavigate()
   const { id } = useParams()
   const [formData, setFormData] = useState()
@@ -18,10 +17,8 @@ const UpdateProject = (props) => {
 
   const handleUpdateProject = async (e) => {
     e.preventDefault()
-    console.log('form data in update', formData);
     try {
       const updatedProject = await updateProject(id, formData)
-      console.log(updatedProject);
       props.handleUpdateProjectsList(updatedProject)
       navigate(`/projects`)
       } catch (error) {
@@ -37,7 +34,6 @@ const UpdateProject = (props) => {
     fetchProject()
   }, [id])
 
-  console.log('formdata', formData);
   return (
     <UpdateForm 
       handleChange={handleChange}

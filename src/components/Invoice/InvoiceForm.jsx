@@ -1,14 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 
-const InvoiceForm = ({handleCreateInvoice, handleChange, validForm, setValidForm, formData, setFormData, clients, projects}) => {
+const InvoiceForm = ({handleCreateInvoice, handleChange, validForm, setValidForm, formData, setFormData, projects}) => {
   const formElement = useRef()
 
   const fetchProjectData = (e) => {
-    console.log(e.target.value);
     const foundProj = projects.find((project) => {
       return project._id === e.target.value
     })
-    console.log(foundProj);
     setFormData({
       projectBilled: foundProj._id,
       title: foundProj.title,
@@ -18,8 +16,6 @@ const InvoiceForm = ({handleCreateInvoice, handleChange, validForm, setValidForm
       invoiceTotal: foundProj.hoursWorked * foundProj.hourlyRate,
     })
   }
-
-  
 
   useEffect(() => {
     formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)

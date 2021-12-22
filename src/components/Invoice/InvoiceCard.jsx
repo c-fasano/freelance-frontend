@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment'
 
 const InvoiceCard = (props) => {
-  console.log(props);
   return (
     <>
       <h1>{props.invoice.title}</h1>

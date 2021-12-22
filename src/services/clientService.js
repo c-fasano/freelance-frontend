@@ -42,7 +42,6 @@ export const getClientById = async (clientId) => {
         "Authorization": `Bearer ${tokenService.getToken()}`
       },
     })
-    console.log('res', res);
     const data = await res.json()
     return data
   } catch (error) {

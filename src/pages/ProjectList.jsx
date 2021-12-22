@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
-// Services
-
 // Components
 import ProjectCard from '../components/Project/ProjectCard'
 

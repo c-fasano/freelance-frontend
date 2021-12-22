@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
+// Components
 import TaskList from './TaskList';
 import CreateTask from './CreateTask'
-
+// Services
 import * as projectService from '../../services/projectService'
 
 const TaskSection = ({project, setProject, tasks, setTasks}) => {
@@ -32,9 +32,6 @@ const TaskSection = ({project, setProject, tasks, setTasks}) => {
       const updatedTaskList = tasks.map((task) => (
         task._id === taskId ? updatedTask : task
       ))
-
-      console.log('updatedTask', updatedTask);
-
       setTasks(updatedTaskList)
     } catch (error) {
       throw error

@@ -1,16 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import moment from 'moment';
 
-const UpdateForm = ({handleChange, handleUpdateProject, validForm, setValidForm, formData, clients}) => {
-  
+const UpdateForm = ({handleChange, handleUpdateProject, validForm, setValidForm, formData, clients}) => {  
   const formElement = useRef()
-  console.log('in form', formData);
+  
   useEffect(() => {
     formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
   }, [formData])
   
-
-
   return (
     <>
       <h1>Project Form</h1>

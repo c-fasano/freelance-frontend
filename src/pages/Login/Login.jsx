@@ -1,5 +1,7 @@
 import { useState } from 'react'
+// Components
 import LoginForm from '../../components/LoginForm/LoginForm'
+// Styles
 import styles from './Login.module.css'
 
 const LoginPage = props => {

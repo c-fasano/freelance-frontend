@@ -50,7 +50,6 @@ export const getProjectById = async (projectId) => {
 }
 
 export const updateProject = async (projectId, formData) => {
-  console.log('here');
   try {
     const res = await fetch(`${BASE_URL}${projectId}`, {
       method: "PUT",
@@ -108,11 +107,9 @@ export const setTaskStatus = async (projectId, taskId, stat) => {
         'content-type': 'application/json',
         'Authorization': `Bearer ` + tokenService.getToken()
       },
-
       body: JSON.stringify({
         status: stat
       })
-
     })
     const data = await res.json()
     return data

@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
-
+// Services
 import * as clientService from '../services/clientService'
+// Components
 import ClientCard from '../components/Client_components/ClientCard'
 import ClientActions from '../components/Client_components/ClientActions';
-
 
 const ClientDetails = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [client, setClient] = useState()
-  console.log('client', client);
-  console.log('id', id);
 
   const handleDeleteClient = async (clientId) => {
     try {
@@ -27,7 +25,6 @@ const ClientDetails = (props) => {
     const fetchClient = async () => {
       try {
         const clientData = await clientService.getClientById(id)
-        console.log('here', clientData);
         setClient(clientData)
       } catch (error) {
         throw error

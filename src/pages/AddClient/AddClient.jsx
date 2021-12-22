@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-
+// Components
 import ClientForm from './ClientForm'
+// Services
 import { addClient } from '../../services/clientService';
 
 const AddClient = (props) => {

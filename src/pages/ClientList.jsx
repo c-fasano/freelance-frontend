@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
+// Components
 import ClientCard from '../components/Client_components/ClientCard'
 
 const ClientList = ({user, clients}) => {

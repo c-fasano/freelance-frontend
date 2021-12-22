@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment'
+// Style
 import './project-card.scss'
 
 const ProjectCard = (props) => {

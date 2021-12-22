@@ -1,5 +1,8 @@
 import React from 'react';
+import moment from 'moment'
+// Components
 import ClientList from '../ClientList';
+// Styles
 import './profile.scss'
 import moment from 'moment'
 import { Link } from 'react-router-dom';

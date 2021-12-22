@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-
+// Components
 import UpdateForm from './UpdateForm'
-
+// Services
 import { updateClient, getClientById } from '../../services/clientService'
 
 const UpdateClient = (props) => {

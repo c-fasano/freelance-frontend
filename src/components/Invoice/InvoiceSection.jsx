@@ -1,3 +1,4 @@
+// * ICEBOX FUNCTIONALITY
 import React from 'react';
 
 const InvoiceSection = () => {

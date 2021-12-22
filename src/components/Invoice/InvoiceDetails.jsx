@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
-
+// Services
 import * as invoiceService from '../../services/invoiceService'
+// Components
 import InvoiceCard from './InvoiceCard';
 import InvoiceActions from './InvoiceActions';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-
+// Services
 import { updateHours } from '../../services/projectService'
-
+// Components
 import HourCounter from './HourCounter'
 import TotalHours from './TotalHours'
 
@@ -11,11 +11,10 @@ const HoursSection = (props) => {
   const handleUpdateHours = async (totalHours) => {
     try {
       props.setHours(totalHours)
-      const updatedProject = await updateHours(props.project._id, totalHours)
+      await updateHours(props.project._id, totalHours)
     } catch (error) {
       throw error
     }
-    
   }
 
   return (

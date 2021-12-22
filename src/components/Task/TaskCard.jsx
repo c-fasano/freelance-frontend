@@ -1,8 +1,8 @@
 import React from 'react';
+// Components
 import TaskActions from './TaskActions'
 
 const TaskCard = (props) => {
-
   return (
     <>
       <p>{props.task.task}</p>
