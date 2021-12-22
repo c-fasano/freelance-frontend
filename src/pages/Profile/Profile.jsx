@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment'
 // Components
 import ClientList from '../ClientList';
@@ -8,7 +9,6 @@ import moment from 'moment'
 import { Link } from 'react-router-dom';
 
 const Profile = ({user, projects, clients, clientListStatus, setClientListStatus}) => {
-  
   console.log(clientListStatus)
 
   return (
@@ -35,13 +35,14 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
       </div>
       <section className="project-container">
           {projects?.map((project) => (
-            <div className="project-list">
-              <h1>{project.title}</h1>
-              <h2>{moment(project.startDate).format('MM/DD/YYYY')}</h2>
-              <h2>{moment(project.endDate).format('MM/DD/YYYY')}</h2>
-              <h3>${project.hourlyRate} /Hr</h3>
-              <br/>
-            </div>
+            <Link key={project._id} to={`/projects/${project._id}`}>
+              <div className="project-list">
+                <h1>{project.title}</h1>
+                <h2>{moment(project.startDate).format('MM/DD/YYYY')}</h2>
+                <h2>{moment(project.endDate).format('MM/DD/YYYY')}</h2>
+                <h3>${project.hourlyRate} /Hr</h3>
+              </div>
+              </Link>
           ))}
       </section>
       <div className={`clients ${clientListStatus ? "inactive-list" : "active-list"}`}>

@@ -38,7 +38,7 @@ const Landing = ({ user, handleLogout, signInFormStatus, setSignInFormStatus,  h
             />
           </div>
           <div className={`sign-up-form ${signUpFormStatus ? "active-sign-up" : "inactive-sign-up"}`}>
-            <SignupForm
+            <SignUpForm
               handleSignupOrLogin={handleSignupOrLogin}
             />
           </div>
