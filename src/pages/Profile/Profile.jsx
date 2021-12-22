@@ -22,7 +22,7 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
             <br/><br/>
             <p><button onClick={() => setClientListStatus(!clientListStatus)}>Client List</button></p>
             <br/><br/>
-            <p>Create New Project</p>
+            <p></p>
             <br/><br/>
             <p>Another Link</p>
             <br/><br/>
@@ -36,10 +36,11 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
               <h2>{moment(project.startDate).format('MM/DD/YYYY')}</h2>
               <h2>{moment(project.endDate).format('MM/DD/YYYY')}</h2>
               <h3>${project.hourlyRate} /Hr</h3>
+              <br/>
             </div>
           ))}
       </section>
-      <div className={`clients ${clientListStatus ? "active-list" : "inactive-list"}`}>
+      <div className={`clients ${clientListStatus ? "inactive-list" : "active-list"}`}>
         <h1 className="list-title">Client List</h1>
           {clients?.map((client) => (
             <div className="client">

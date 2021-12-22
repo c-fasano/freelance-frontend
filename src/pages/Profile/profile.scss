@@ -2,8 +2,7 @@
 @import '../../sassStyles/mixins';
 
 body {
-  background-color: $light2;
-}
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");}
 
 .header {
   height: 5%;
@@ -55,7 +54,7 @@ button {
 
     .prof-picture {
       height: 12%;
-      background-color: $light2;
+      background-color: $mid1;
     }
 
     .prof-card {
@@ -84,6 +83,7 @@ button {
       margin-left: 40%;
       border-top: 2px solid $dark1;
       border-bottom: 2px solid $dark1;
+      color: $light1;
 
       }
     }
@@ -136,7 +136,7 @@ button {
   
       .prof-picture {
         height: 12%;
-        background-color: $light2;
+        background-color: $mid1;
   
       }
   
