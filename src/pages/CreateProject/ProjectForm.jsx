@@ -1,17 +1,36 @@
 import React, { useEffect, useRef } from 'react';
-import './projectForm.scss'
+import { Link } from 'react-router-dom';
 
+import './projectForm.scss'
+import '../../sassStyles/_variables.scss'
 
 const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidForm, formData, clients}) => {
   const formElement = useRef()
-  
+
+const linkStyle = {
+  width: "100px",
+  height: "100px",
+  backgroundColor: "rgba(60, 110, 113, 0.5",
+  color: "black",
+  position: "absolute",
+  borderRadius: "50%",
+  top: "5vh",
+  left: "77vw",
+}
+
   useEffect(() => {
     formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
   }, [formData])
   
   return (
     <div className="container">
+      <Link 
+        to="/profile"
+        style={linkStyle}
+      >
+      </Link>
       <div className="project-form">
+      <div className="return">Return To Profile</div>
         <form onSubmit={(e) => handleCreateProject(e)} ref={formElement}>
           <label>Project Title</label><br />
           <input
