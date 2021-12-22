@@ -27,7 +27,7 @@ const CreateProject = (props) => {
     try {
       const newProject = await addProject(formData)
       props.setProjects([newProject, ...props.projects ])
-      navigate('/projects')
+      navigate('/profile')
     } catch (error) {
       throw error
     }
@@ -35,7 +35,6 @@ const CreateProject = (props) => {
 
   return (
     <>
-      <h1>Create Project</h1>
       <ProjectForm 
         project={project}
         setProject={setProject}

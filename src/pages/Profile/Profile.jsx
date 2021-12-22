@@ -2,6 +2,7 @@ import React from 'react';
 import ClientList from '../ClientList';
 import './profile.scss'
 import moment from 'moment'
+import { Link } from 'react-router-dom';
 
 const Profile = ({user, projects, clients, clientListStatus, setClientListStatus}) => {
   
@@ -22,7 +23,7 @@ const Profile = ({user, projects, clients, clientListStatus, setClientListStatus
             <br/><br/>
             <p><button onClick={() => setClientListStatus(!clientListStatus)}>Client List</button></p>
             <br/><br/>
-            <p></p>
+            <Link to="/newProject">Create New Project</Link>
             <br/><br/>
             <p>Another Link</p>
             <br/><br/>

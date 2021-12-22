@@ -83,7 +83,7 @@ button {
       margin-left: 40%;
       border-top: 2px solid $dark1;
       border-bottom: 2px solid $dark1;
-      color: $light1;
+      color: $dark1;
 
       }
     }
@@ -168,6 +168,7 @@ button {
       margin-top: 25%;
       border-top: 2px solid rgba($dark1, 0.5);
       border-bottom: 2px solid rgba($dark1, 0.5);
+      color: $dark1;
     }
     
   }

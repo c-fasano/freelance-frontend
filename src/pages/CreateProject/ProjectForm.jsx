@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import './projectForm.scss'
 
 
 const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidForm, formData, clients}) => {
@@ -9,57 +10,59 @@ const ProjectForm = ({ handleCreateProject, handleChange, validForm, setValidFor
   }, [formData])
   
   return (
-    <>
-      <h1>Project Form</h1>
-      <form onSubmit={(e) => handleCreateProject(e)} ref={formElement}>
-        <label>Project Title</label><br />
-        <input
-          required
-          type='text'
-          name='title'
-          autoComplete='off'
-          placeholder='Title'
-          onChange={handleChange}
-        /><br />
-        <label>Client: </label>
-        <select name="client" onChange={handleChange}>
-            <option value='' default></option>
-          {clients.map((client) => (
-            <option value={client._id} key={client._id}>{client.name}</option>
-          ))}
-        </select><br />
-        <label>Start Date</label><br />
-        <input 
-          required
-          type='date'
-          name='startDate'
-          autoComplete='off'
-          onChange={handleChange}
-        /><br />
-        <label>End Date</label><br />
-        <input 
-          required
-          type='date'
-          name='endDate'
-          autoComplete='off'
-          onChange={handleChange}
-        /><br />
-        <label>Hourly Rate</label><br />
-        <input 
-          required
-          type='number'
-          name='hourlyRate'
-          autoComplete='off'
-          onChange={handleChange}
-        /><br />
-        <button
-          type="submit"
-          disabled={!validForm}
-        >
-          Add Project
-        </button>
-      </form>
-    </>
+    <div className="container">
+      <div className="project-form">
+        <form onSubmit={(e) => handleCreateProject(e)} ref={formElement}>
+          <label>Project Title</label><br />
+          <input
+            required
+            type='text'
+            name='title'
+            autoComplete='off'
+            placeholder='Title'
+            onChange={handleChange}
+          /><br />
+          <label>Client: </label>
+          <select name="client" onChange={handleChange}>
+              <option value='' default></option>
+            {clients.map((client) => (
+              <option value={client._id} key={client._id}>{client.name}</option>
+            ))}
+          </select>
+          <br/><br/>
+          <label>Start Date</label><br />
+          <input 
+            required
+            type='date'
+            name='startDate'
+            autoComplete='off'
+            onChange={handleChange}
+          /><br />
+          <label>End Date</label><br />
+          <input 
+            required
+            type='date'
+            name='endDate'
+            autoComplete='off'
+            onChange={handleChange}
+          /><br />
+          <label>Hourly Rate</label><br />
+          <input 
+            required
+            type='number'
+            name='hourlyRate'
+            autoComplete='off'
+            onChange={handleChange}
+          /><br />
+          <button
+            type="submit"
+            disabled={!validForm}
+          >
+            Add Project
+          </button>
+        </form>
+      </div>
+    </div>
   )
 }
 
