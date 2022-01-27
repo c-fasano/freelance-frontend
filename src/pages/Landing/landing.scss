@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: fixed;
     .title-info {
-      position: relative;
+      position: inherit;
     }
     h1 {
       margin-left: 19%;
@@ -55,7 +55,6 @@
     background-image: url('../../images/Project-photo2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
   }
 
   .spacer1 {
@@ -85,7 +84,6 @@
 }
 
 .active-sign-up {
-  position: absolute;
   z-index: 3;
 }
 
@@ -114,10 +112,6 @@
 }
 
 .sign-in-button {
-  z-index: 100;
-}
-
-.sign-up-button {
   z-index: 100;
 }
 

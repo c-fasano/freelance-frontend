@@ -28,9 +28,10 @@ const navLinkStyle = {
     <div className="prof-page">
       <div className="header"></div>
       <div className="prof-side-bar">
-        <div className="prof-picture"></div>
-        <div className="prof-card">  
+        <div className="prof-picture">
           <h1>{user.name}</h1>
+        </div>
+        <div className="prof-card">  
         </div>
         <div className="side-nav">
             <br/><br/>

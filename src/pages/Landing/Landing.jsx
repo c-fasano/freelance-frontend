@@ -23,19 +23,19 @@ const Landing = ({ user, handleLogout, signInFormStatus, setSignInFormStatus,  h
           </div>
         }
       </div>
-
+      {!user && signInFormStatus &&
+        <div className={`sign-in-form ${signInFormStatus ? "active-sign-in" : "inactive-sign-in"}`}>
+          <SignInForm 
+            handleSignupOrLogin={handleSignupOrLogin}
+            />
+        </div>
+      }
       <section className="one">
         <div className="title-info">
           <h1>Folio</h1>
           <br/>
           <h2>An App for Freelancers</h2>
-          {!user && signInFormStatus &&
-            <div className={`sign-in-form ${signInFormStatus ? "active-sign-in" : "inactive-sign-in"}`}>
-              <SignInForm 
-                handleSignupOrLogin={handleSignupOrLogin}
-                />
-            </div>
-          }
+
           <br/>
           <p className="short-desc">A way to simplify your life with the ability to store your past and current projects and clients</p>
         </div>
