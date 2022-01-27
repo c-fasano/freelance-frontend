@@ -3,14 +3,13 @@
 .proj-update {
   height: 100vh;
   width: 100vw;
-  background-image: url('../../images/Project-photo8-Edit.png');
+  background-image: url(../../images/Project-Photo9.jpeg);
   background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: auto;
 
   h1 {
     text-align: center;
-    margin-top: 2vh;
     font-size: 5vw;
     font-family: 'Playfair Display SC';
     color: $mid1;
@@ -20,7 +19,6 @@
 .update {
   width: 25vw;
   height: 60vh;
-  margin-left: 14%;
 
   label {
     margin-top: 2.5vh;
